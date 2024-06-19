@@ -1,0 +1,26 @@
+<div class="main-container">
+    <div class="content-container">
+        <clr-vertical-nav clrVerticalNavCollapsible="true" [(clrVerticalNavCollapsed)]="collapsed">
+            <a *ngIf="!disabled" clrVerticalNavLink [routerLink]="['/overview']" routerLinkActive="active"
+            (click)="activeIndex = 0" 
+            [ngClass]="{ active: 0 == activeIndex }">
+            <cds-icon shape="dashboard" clrVerticalNavIcon></cds-icon>
+                Overview
+            </a>
+      
+            <a *ngIf="!disabled" clrVerticalNavLink [routerLink]="['/kafkatopics']" routerLinkActive="active"
+            (click)="activeIndex = 1" disabled
+            [ngClass]="{ active: 1 == activeIndex }">
+                <cds-icon shape="eye" clrVerticalNavIcon></cds-icon>
+                TOPICS
+            </a> 
+      
+            <a *ngIf="!disabled" clrVerticalNavLink [routerLink]="['/group']" routerLinkActive="active"
+            (click)="activeIndex = 2" 
+            [ngClass]="{ active: 2 == activeIndex }">
+                <cds-icon shape="book" clrVerticalNavIcon></cds-icon>
+                Consumer Groups
+            </a>           
+          </clr-vertical-nav>
+    </div>
+  </div>
